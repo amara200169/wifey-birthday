@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For You, Ermarie 💫</title>
+  <style>
+    body {
+      background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000 100%);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #ffd6ff;
+      margin-top: 60px;
+    }
+    .btn {
+      background: #e75480;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 10px;
+      color: white;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      background: #ff85a2;
+    }
+    .msg {
+      display: none;
+      margin-top: 40px;
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .photo {
+      margin-top: 30px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff69b4;
+      box-shadow: 0 0 25px #ff69b4;
+    }
+    a.music-link {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 20px;
+      background-color: #ff69b4;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    a.music-link:hover {
+      background-color: #ff85c1;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>To My Star, Ermarie ✨</h1>
+  <p>Click below to reveal something from the heart 💌</p>
+  <button class="btn" onclick="showMessage()">Reveal My Love 🌹</button>
+
+  <div class="msg" id="message">
+    <img src="ermarie.jpg" alt="Beautiful Ermarie" class="photo"/>
+    <h2>Happy Birthday, My Universe 💖</h2>
+    <p>
+      You're not just the girl of my dreams — you're the dream that made me believe again.  
+      Every laugh, every late-night talk, every little moment with you has become a memory I never want to let go of.
+    </p>
+    <p>
+      You are peace in my chaos, the soft melody in my silence, the one soul who sees through all my layers.
+      I’m not just falling for you — I’ve already fallen. Completely. Irrevocably.
+    </p>
+    <p>
+      I want to build with you, grow with you, get better for you.  
+      Because loving you… feels like the only thing I ever got perfectly right.
+    </p>
+    <p>
+      💌 <strong>This song says what my heart whispers every time I think of you:</strong><br/>
+      <a class="music-link" href="https://www.youtube.com/watch?v=5cKeDvaD5eI" target="_blank">
+        🎶 Listen: Rest of My Life – Keenan Te
+      </a>
+    </p>
+    <p>
+      Yours, without expiration — <br/>💘 Your Devoted Daydreamer
+    </p>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('message').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
