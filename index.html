@@ -7,44 +7,64 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2NCA2NCc+PHRleHQgeD0nNicgeT0nNTInIGZvbnQtc2l6ZT0nNDgnPuKYnzwvdGV4dD48L3N2Zz4=" />
   <title>Congratulations, Ermarie!</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600&display=swap');
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg-1: #fde3ff;
-      --bg-2: #dff0ff;
-      --card: rgba(255, 255, 255, 0.92);
-      --ink: #1f1b2d;
-      --muted: #6a6675;
-      --accent: #ff9ab5;
-      --accent-deep: #ff6e9d;
+      --bg-1: #0d1029;
+      --bg-2: #161f42;
+      --glow-1: rgba(255, 156, 186, 0.32);
+      --glow-2: rgba(119, 199, 255, 0.25);
+      --card: #fff8f2;
+      --ink: #1f1626;
+      --muted: #6f6877;
+      --accent: #ff6fa2;
+      --accent-2: #ffd166;
+      --outline: #e7d8c8;
+      --accent-deep: #ff4f8f;
     }
 
     body {
-      font-family: 'Work Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 28px;
-      background: radial-gradient(circle at 15% 20%, #fff2c7, transparent 32%),
-                  radial-gradient(circle at 80% 10%, #e6f5ff, transparent 30%),
-                  radial-gradient(circle at 75% 80%, #ffe4f0, transparent 30%),
-                  linear-gradient(135deg, var(--bg-1), var(--bg-2));
-      color: var(--ink);
+      padding: 30px;
+      background:
+        radial-gradient(140vw 140vw at 15% 10%, var(--glow-1), transparent 42%),
+        radial-gradient(120vw 120vw at 85% 20%, var(--glow-2), transparent 38%),
+        linear-gradient(135deg, var(--bg-1), var(--bg-2));
+      color: #f5f1ff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      background: repeating-linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.04) 0 2px,
+        transparent 2px 12px
+      );
+      opacity: 0.35;
+      pointer-events: none;
     }
 
     .card {
       position: relative;
       width: 100%;
-      max-width: 900px;
-      padding: 28px 32px 34px;
+      max-width: 940px;
+      padding: 30px 34px 36px;
       background: var(--card);
-      border-radius: 22px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.6);
+      border-radius: 28px;
+      box-shadow:
+        0 26px 70px rgba(0, 0, 0, 0.35),
+        0 0 0 1.5px var(--outline);
       overflow: hidden;
-      backdrop-filter: blur(10px);
     }
 
     .card::before,
@@ -52,72 +72,70 @@
       content: '';
       position: absolute;
       border-radius: 999px;
-      filter: blur(40px);
-      opacity: 0.5;
       pointer-events: none;
     }
 
     .card::before {
-      width: 220px;
-      height: 220px;
-      background: linear-gradient(130deg, #ffe0f2, #fff0c7);
-      top: -70px;
-      right: -60px;
-      transform: rotate(-12deg);
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(255, 111, 162, 0.12), transparent 65%);
+      top: -80px;
+      right: -80px;
     }
 
     .card::after {
-      width: 180px;
-      height: 180px;
-      background: linear-gradient(140deg, #dff5ff, #ffe8ff);
-      bottom: -70px;
-      left: -40px;
-      transform: rotate(8deg);
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(255, 209, 102, 0.16), transparent 70%);
+      bottom: -60px;
+      left: -60px;
     }
 
     .header {
       text-align: center;
       position: relative;
       z-index: 1;
-      margin-bottom: 22px;
+      margin-bottom: 28px;
     }
 
     .badge {
       display: inline-block;
-      padding: 7px 14px;
-      font-size: 11px;
-      letter-spacing: 0.16em;
+      padding: 8px 16px;
+      font-size: 11.5px;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       border-radius: 999px;
-      background: rgba(255, 154, 181, 0.2);
-      color: var(--accent-deep);
-      margin-bottom: 12px;
+      background: rgba(255, 111, 162, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(255, 111, 162, 0.4);
+      margin-bottom: 14px;
       font-weight: 600;
     }
 
     h1 {
-      font-family: 'Playfair Display', 'Work Sans', serif;
-      font-size: clamp(26px, 3vw, 32px);
-      margin-bottom: 8px;
-      letter-spacing: 0.01em;
+      font-family: 'Fraunces', 'Manrope', serif;
+      font-size: clamp(28px, 3.2vw, 38px);
+      margin-bottom: 10px;
+      letter-spacing: 0.015em;
+      color: var(--ink);
     }
 
     .subtitle {
-      font-size: 15px;
+      font-size: 15.5px;
       color: var(--muted);
-      line-height: 1.5;
+      line-height: 1.6;
       max-width: 720px;
       margin: 0 auto;
     }
 
     .message {
-      margin: 24px auto 24px;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #2d2a35;
+      margin: 28px auto 26px;
+      font-size: 16.5px;
+      line-height: 1.75;
+      color: var(--ink);
       text-align: center;
-      padding: 0 10px;
-      max-width: 760px;
+      padding: 0 14px;
+      max-width: 780px;
     }
 
     .message p + p { margin-top: 12px; }
@@ -132,33 +150,37 @@
     }
 
     .gallery-title {
-      font-size: 12px;
+      font-size: 12.5px;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: #8a86a0;
-      margin-bottom: 16px;
+      letter-spacing: 0.22em;
+      color: #857b92;
+      margin-bottom: 18px;
       font-weight: 600;
     }
 
     .gallery img {
-      width: 82%;
-      max-width: 540px;
+      width: 84%;
+      max-width: 560px;
       height: auto;
       border-radius: 18px;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
-      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      box-shadow:
+        0 18px 42px rgba(0, 0, 0, 0.2),
+        0 0 0 10px rgba(255, 255, 255, 0.6);
+      transition: transform 0.32s ease, box-shadow 0.32s ease;
     }
 
     .gallery img:hover {
-      transform: translateY(-4px) scale(1.015);
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px) scale(1.016);
+      box-shadow:
+        0 20px 46px rgba(0, 0, 0, 0.25),
+        0 0 0 12px rgba(255, 255, 255, 0.72);
     }
 
     .footer {
-      margin-top: 18px;
+      margin-top: 22px;
       text-align: center;
       font-size: 13px;
-      color: var(--muted);
+      color: #817a88;
       position: relative;
       z-index: 1;
     }
@@ -167,8 +189,9 @@
 
     @media (max-width: 640px) {
       body { padding: 18px; }
-      .card { padding: 22px 20px 26px; }
-      .gallery img { width: 96%; }
+      .card { padding: 24px 18px 26px; }
+      .message { padding: 0 4px; }
+      .gallery img { width: 96%; max-width: none; }
     }
   </style>
 </head>
