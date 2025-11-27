@@ -2,117 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For You, Ermarie 💫</title>
+  <title>Congratulations, Ermarie 💛</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000 100%);
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background:
+        linear-gradient(135deg, rgba(240, 207, 255, 0.9), rgba(206, 227, 255, 0.9)),
+        url("background.jpg") center/cover no-repeat;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      max-width: 900px;
+      width: 100%;
+      padding: 24px 26px 30px;
+      box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+
+    .header {
       text-align: center;
-      padding: 50px;
-      overflow-x: hidden;
+      margin-bottom: 20px;
     }
-    h1 {
-      font-size: 3rem;
-      color: #ffd6ff;
-      margin-top: 60px;
-    }
-    .btn {
-      background: #e75480;
-      border: none;
-      padding: 14px 28px;
-      border-radius: 10px;
-      color: white;
-      font-size: 1.2rem;
-      margin-top: 30px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-    .btn:hover {
-      background: #ff85a2;
-    }
-    .msg {
-      display: none;
-      margin-top: 40px;
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    .photo {
-      margin-top: 30px;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #ff69b4;
-      box-shadow: 0 0 25px #ff69b4;
-    }
-    a.music-link {
+
+    .badge {
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 20px;
-      background-color: #ff69b4;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      padding: 6px 12px;
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      background: rgba(255, 221, 141, 0.4);
+      color: #8a4b00;
+      margin-bottom: 10px;
     }
-    a.music-link:hover {
-      background-color: #ff85c1;
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 6px;
+      color: #222;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    .subtitle {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .message {
+      margin: 22px 0 22px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      text-align: center;
+      padding: 0 8px;
+    }
+
+    .message span.strong {
+      font-weight: 600;
+    }
+
+    /* --- One-photo gallery styling --- */
+    .gallery-section {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .gallery-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #999;
+      margin-bottom: 14px;
+    }
+
+    .gallery img {
+      width: 80%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery img:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+    }
+
+    .footer {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+    }
+
+    .heart {
+      color: #e25555;
+      font-size: 16px;
+      vertical-align: middle;
     }
   </style>
 </head>
+
 <body>
+  <div class="card">
+    <div class="header">
+      <div class="badge">New Team Leader</div>
+      <h1>Congratulations, Ermarie 💛</h1>
+      <p class="subtitle">I’m so proud of you and everything you’re achieving.</p>
+    </div>
 
-  <h1>For the One Who Changed Everything...</h1>
-  <p>Click below to reveal something from the heart 💌</p>
-  <button class="btn" onclick="showMessage()">Reveal My Love 🌹</button>
+    <div class="message">
+      <p>
+        Ermarie, today you became a <span class="strong">team leader</span>, but to me you’ve always been
+        someone people naturally look up to. You work hard, you care about others, and you never give up.
+      </p>
+      <p style="margin-top: 12px;">
+        I’m really proud of you. Seeing you reach this new step makes me admire you even more.
+        You deserve this and so much more, and I’m excited to see everything you’ll achieve from here.
+      </p>
+      <p style="margin-top: 12px;">
+        I just want you to know that I’m always in your corner, supporting you and believing in you. 💛
+      </p>
+    </div>
 
-  <div class="msg" id="message">
-    <img src="ermarie.jpg" alt="Beautiful Ermarie" class="photo"/>
-    <h2>Happy Birthday, My Universe 💖</h2>
-    <p>
-      I still remember the very first day we started talking…  
-      it was like the world paused just long enough for you to walk in.  
-      The connection we had — it was instant, effortless, like we had known each other long before this lifetime.
-    </p>
-    <p>
-      And that night I took you to the movies… I couldn’t even tell you what the film was about —  
-      all I remember was how your smile outshone the screen, and how I knew in that moment:  
-      <em>I didn’t want this feeling to ever fade.</em>
-    </p>
-    <p>
-      You made something ordinary feel magical. That night, the world got quieter…  
-      and you became the loudest thing my heart ever heard.
-    </p>
-    <p>
-      You are the calm in my chaos, the peace in my pulse,  
-      and I’d choose you — in every timeline, every lifetime, over and over again.
-    </p>
-    <p>
-      💌 <strong>This song says what I feel every time I think of you:</strong><br/>
-      <a class="music-link" href="https://www.youtube.com/watch?v=5cKeDvaD5eI" target="_blank">
-        🎶 Listen: Rest of My Life – Keenan Te
-      </a>
-    </p>
-    <p>
-      Always and only yours,  
-      — Your DevOps Romeo 💻💋
-    </p>
+    <!-- One photo -->
+    <div class="gallery-section">
+      <div class="gallery-title">One of my favorite pictures of you</div>
+      <div class="gallery">
+        <img src="ermarie.jpg" alt="Photo of Ermarie" />
+      </div>
+    </div>
+
+    <div class="footer">
+      Made with <span class="heart">♥</span> just for you.
+    </div>
   </div>
-
-  <script>
-    function showMessage() {
-      document.getElementById('message').style.display = 'block';
-    }
-  </script>
-
 </body>
 </html>
